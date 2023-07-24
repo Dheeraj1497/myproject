@@ -1,0 +1,16 @@
+<% flash.each do |type, msg| %>
+  <div style="color:green; font-size: 30px;">
+    <%= msg %>
+  </div>
+<% end %>
+<h1>Employees Details</h1>
+
+<ul>
+  <% @employees.each do |emps| %>
+    <li>
+      <%= link_to emps.id, emps %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create Employee", new_employee_path %>

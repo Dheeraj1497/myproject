@@ -1,0 +1,19 @@
+<h1>Employee Deatils is</h1>
+
+<h3 style="color: blue;">Id = <%= @employee.id %></h1>
+
+<h3 style="color: red;">Name = <%= @employee.name %></h3>
+
+<h3 style="color: red">City = <%= @employee.city %></h3>
+
+<h3 style="color: green;">City = <%= @employee.designation %></h3>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_employee_path(@employee) %></li>
+</ul>
+
+<li><%= link_to "Delete Employee", employee_path(@employee), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>

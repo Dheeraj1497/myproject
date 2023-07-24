@@ -1,0 +1,29 @@
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @employee.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
+    <% @employee.errors.full_messages_for(:city).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :designation %><br>
+    <%= form.text_field :designation %>
+    <% @employee.errors.full_messages_for(:designation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div><br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
